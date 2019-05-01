@@ -27,7 +27,9 @@
         </p:nvSpPr>
         <p:spPr/>
         <p:txBody>
-          <a:bodyPr/>
+          <a:bodyPr wrap="square" rtlCol="0">
+            <a:normAutofit fontScale="5000" lnSpcReduction="20000"/>
+          </a:bodyPr>
           <a:lstStyle/>
           <a:p>
             <a:r>
@@ -50,18 +52,21 @@
         </p:nvSpPr>
         <p:spPr/>
         <p:txBody>
-          <a:bodyPr/>
+          <a:bodyPr wrap="square" rtlCol="0">
+            <a:normAutofit fontScale="55000" lnSpcReduction="20000"/>
+          </a:bodyPr>
           <a:lstStyle/>
           <% content.each_with_index do |c, index| %>
-          <a:p>
-            <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t><%= c %></a:t>
-            </a:r>
-          <% if content.length == (index + 1) %>
-          <a:endParaRPr lang="en-US"/>
-          <% end %>
-          </a:p>
+            <a:p>
+              <a:r>
+                <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+                <a:ext />
+                <a:t ><%= c %></a:t>
+              </a:r>
+            <% if content.length == (index + 1) %>
+              <a:endParaRPr lang="en-US"/>
+            <% end %>
+            </a:p>
           <% end %>
         </p:txBody>
       </p:sp>
